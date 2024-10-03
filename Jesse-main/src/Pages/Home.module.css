@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Landing page styles */
+.home {
+    background-image: url('https://img.freepik.com/free-photo/green-white-herbal-sea-salt-with-many-small-candles-white-backdrop_23-2147867835.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    padding: 40px 60px;
+    border-radius: 10px;
+    max-width: 700px;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+}
+
+/* Hero Title */
+.heroTitle {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+/* Hero Text */
+.heroText {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+/* CTA Button */
+.ctaButton {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 2s infinite;
+}
+
+.ctaButton:hover {
+    background-color: #ff4500;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4); /* Glow on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+    
+    .heroText {
+        font-size: 1rem;
+    }
+
+    .ctaButton {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333; /* Dark background */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Centralize content within max-width */
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ff6600; /* Orange hover effect */
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks li {
+    position: relative;
+}
+
+.navLinks a {
+    color: white; /* White text */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect for links */
+.navLinks a:hover {
+    color: #ff6600; /* Orange text on hover */
+    border-bottom: 2px solid #ff6600; /* Underline effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navContainer {
+        flex-direction: column;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* General layout for the login page */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full-screen height */
+    /* background: linear-gradient(135deg, #5c67f2, #4a55d4); Gradient background for modern feel */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centering the login form */
+.login-form {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Max width to control form size */
+    text-align: center;
+}
+
+/* Form title styling */
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Input fields */
+.login-form input {
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* On focus, inputs become more prominent */
+.login-form input:focus {
+    outline: none;
+    border-color: #5c67f2; /* Match button and overall theme */
+    box-shadow: 0 0 8px rgba(92, 103, 242, 0.2);
+}
+
+/* Submit button styling */
+.login-form button {
+    padding: 12px;
+    background-color: #5c67f2; /* Main color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+.login-form button:hover {
+    background-color: #4a55d4;
+    transform: translateY(-2px); /* Subtle elevation on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 30px 20px;
+    }
+
+    .login-form h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Career Page */
+.careerSection {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.careerHeader h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #5c67f2;
+    margin-bottom: 20px;
+    animation: textPopIn 1s ease-out;
+}
+
+/* Career Content Styling */
+.careerContent {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.careerContent img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.careerContent h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+.careerContent p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textPopIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .careerHeader h1 {
+        font-size: 2.5rem;
+    }
+
+    .careerContent {
+        padding: 30px;
+    }
+
+    .careerContent h2 {
+        font-size: 1.8rem;
+    }
+}
+
