@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 /* Landing page styles */
-.home {
+ .home {
     background-image: url('https://img.freepik.com/free-photo/green-white-herbal-sea-salt-with-many-small-candles-white-backdrop_23-2147867835.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; /*Parallax effect*/
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,6 +15,111 @@
     overflow: hidden;
     position: relative;
 }
+
+/* Main container styling */
+.signupContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-photo/green-white-herbal-sea-salt-with-many-small-candles-white-backdrop_23-2147867835.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Card style for the form */
+.signupCard {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Title */
+.formTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Form group (labels + inputs) */
+.formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Input field styling */
+.inputField {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Add focus effect */
+.inputField:focus {
+    outline: none;
+    border-color: #5c67f2;
+    box-shadow: 0 0 8px rgba(92, 103, 242, 0.3);
+}
+
+/* Submit button */
+.submitButton {
+    background-color: #5c67f2;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.submitButton:hover {
+    background-color: #4a55d4;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(92, 103, 242, 0.3);
+}
+
+/* Form animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .signupCard {
+        padding: 30px 20px;
+    }
+
+    .formTitle {
+        font-size: 1.5rem;
+    }
+}
+
 
 .hero {
     background: rgba(0, 0, 0, 0.6); /* Dark overlay */
@@ -226,6 +331,10 @@
     transition: all 0.3s ease;
 }
 
+.login-form label {
+    color: #333; /* Darker color for better visibility */
+}
+
 /* On focus, inputs become more prominent */
 .login-form input:focus {
     outline: none;
@@ -316,6 +425,34 @@
     max-width: 600px;
     margin: 0 auto;
 }
+
+.servicesList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.servicesList li {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the list items */
+.servicesList li:hover {
+    background-color: #ff6600; /* Change background to orange on hover */
+    color: white; /* Change text color to white */
+    box-shadow: 0 5px 20px rgba(255, 102, 0, 0.4); /* Add stronger shadow on hover */
+    cursor: pointer; /* Show pointer cursor */
+}
+
+
+
 
 /* Animations */
 @keyframes fadeIn {
